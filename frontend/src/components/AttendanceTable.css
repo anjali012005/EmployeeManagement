@@ -1,0 +1,73 @@
+/* Wrapper Card */
+.attendance-wrapper {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+/* Table */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+/* Header */
+.attendance-table thead {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.attendance-table th {
+  text-align: left;
+  padding: 14px;
+  font-weight: 600;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+/* Body Rows */
+.attendance-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  color: #94a3b8;
+}
+
+/* Hover Effect */
+.attendance-table tbody tr {
+  transition: 0.3s ease;
+}
+
+.attendance-table tbody tr:hover {
+  background: rgba(30, 41, 59, 0.85);
+  transform: scale(1.01);
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Status Colors */
+.status-badge.present {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.status-badge.absent {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.status-badge.late {
+  background: rgba(250, 204, 21, 0.15);
+  color: #facc15;
+}

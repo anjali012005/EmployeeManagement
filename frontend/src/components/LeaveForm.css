@@ -1,0 +1,86 @@
+/* ===== Wrapper (Matches Dashboard Theme) ===== */
+.leave-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* ===== Form Card ===== */
+.leave-form {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.3s ease;
+}
+
+.leave-form:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Title ===== */
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+}
+
+/* ===== Form Group ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ===== Inputs & Select ===== */
+.leave-form input,
+.leave-form select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Focus Effect */
+.leave-form input:focus,
+.leave-form select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* ===== Button ===== */
+.submit-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
