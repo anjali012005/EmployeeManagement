@@ -40,7 +40,7 @@ function LeaveTable({ admin }) {
 
       {leaves.map((leave) => (
         <div key={leave._id} className="leave-row">
-          <div>{leave.userId?.fullName || "You"}</div>
+          <div>{leave.userId || "You"}</div>
           <div>{leave.leaveType}</div>
           <div>{new Date(leave.startDate).toLocaleDateString()}</div>
           <div>{new Date(leave.endDate).toLocaleDateString()}</div>
