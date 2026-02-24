@@ -83,3 +83,24 @@ exports.updateLeaveStatus = async (req, res) => {
   leave.status = status;
   res.status(200).json({ success: true, message: `Leave ${status}` });
 };
+
+// getAllLeaves - return all leaves in memory
+exports.getAllLeaves = async (req, res) => {
+  res.status(200).json({ success: true, data: dummyLeaves });
+};
+
+// updateLeaveStatus - update status of a leave
+exports.updateLeaveStatus = async (req, res) => {
+  const { status } = req.body;
+  const leaveId = parseInt(req.params.id);
+
+  const leave = dummyLeaves.find((l) => l.id === leaveId);
+  if (!leave) return res.status(404).json({ success: false, message: "Leave not found" });
+
+  if (leave.status !== "Pending") {
+    return res.status(400).json({ success: false, message: "Leave already processed" });
+  }
+
+  leave.status = status;
+  res.status(200).json({ success: true, message: `Leave ${status}` });
+};
