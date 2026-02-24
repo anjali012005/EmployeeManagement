@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://employeemanagement-snph.onrender.com",
+  baseURL: "https://employeemanagement-snph.onrender.com/api",
 });
 
 API.interceptors.request.use((req) => {
