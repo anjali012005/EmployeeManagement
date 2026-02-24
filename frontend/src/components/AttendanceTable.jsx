@@ -33,8 +33,8 @@ return (
       <tbody>
         {attendance.map((item) => (
           <tr key={item._id}>
-            <td>{item.userId?.fullName}</td>
-            <td>{item.userId?.email}</td>
+            <td>{item.userId}</td>
+            <td>{item.userId}</td>
             <td>{new Date(item.date).toLocaleDateString()}</td>
             <td>
               <span className={`status-badge ${item.status.toLowerCase()}`}>
