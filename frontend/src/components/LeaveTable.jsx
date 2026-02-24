@@ -39,41 +39,37 @@ function LeaveTable({ admin }) {
       </div>
 
       {leaves.map((leave) => (
-        <div key={leave._id} className="leave-row">
-          <div>{leave.userId || "You"}</div>
-          <div>{leave.leaveType}</div>
-          <div>{new Date(leave.startDate).toLocaleDateString()}</div>
-          <div>{new Date(leave.endDate).toLocaleDateString()}</div>
-          <div className="reason">{leave.leaveType}</div>
+  <div key={leave.id} className="leave-row">
+    <div>{leave.userId?.fullName || leave.userId || "You"}</div>
+    <div>{leave.leaveType}</div>
+    <div>{new Date(leave.startDate).toLocaleDateString()}</div>
+    <div>{new Date(leave.endDate).toLocaleDateString()}</div>
+    <div className="reason">{leave.reason}</div>
 
-          <div>
-            <span className={`status ${leave.status.toLowerCase()}`}>
-              {leave.status}
-            </span>
-          </div>
+    <div>
+      <span className={`status ${leave.status.toLowerCase()}`}>
+        {leave.status}
+      </span>
+    </div>
 
-          {admin && (
-            <div className="actions">
-              {leave.status === "Pending" && (
-                <>
-                  <button
-                    className="approve"
-                    onClick={() => updateStatus(leave._id, "Approved")}
-                  >
-                    Approve
-                  </button>
-                  <button
-                    className="reject"
-                    onClick={() => updateStatus(leave._id, "Rejected")}
-                  >
-                    Reject
-                  </button>
-                </>
-              )}
-            </div>
-          )}
-        </div>
-      ))}
+    {admin && leave.status === "Pending" && (
+      <div className="actions">
+        <button
+          className="approve"
+          onClick={() => updateStatus(leave.id, "Approved")}
+        >
+          Approve
+        </button>
+        <button
+          className="reject"
+          onClick={() => updateStatus(leave.id, "Rejected")}
+        >
+          Reject
+        </button>
+      </div>
+    )}
+  </div>
+))}
     </div>
   );
 }
